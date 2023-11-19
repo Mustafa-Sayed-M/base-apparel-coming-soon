@@ -1,0 +1,143 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+/* Variables */
+:root {
+    /* ### Colors: */
+    /* Primary */
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+    /* Neutral */
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+    /* Gradients */
+    --Linear: linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+
+    /* --------------------------------- */
+    /* ### Animations: */
+    /* # Transition */
+    --transition: ease-in-out 300ms;
+}
+/* GLobal Rules */
+a {
+    color: black !important;
+    text-decoration: none !important;
+}
+ul {
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+p {
+    margin: 0 !important;
+}
+/* Body & Html */
+html,
+body {
+    min-height: 100vh;
+    position: relative;
+    font-size: 18px !important;
+    overflow-x: hidden !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+}
+/* Start Page */
+.page .container-fluid {
+    display: flex;
+    height: 100vh;
+    padding-left: 0;
+    padding-right: 0;
+}
+.page .container-fluid .head {
+    display: none;
+}
+.page .container-fluid .text-area {
+    height: 100vh;
+    display: flex;
+    padding: 0 100px;
+    background-size: cover;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    background-image: url(../images/bg-pattern-desktop.svg);
+}
+.page .container-fluid .text-area a.logo {
+    left: 0;
+    top: 60px;
+    position: absolute;
+    margin-left: 100px;
+}
+.page .container-fluid .text-area h1 {
+    color: var(--Dark-Grayish-Red);
+    text-transform: uppercase;
+}
+.page .container-fluid .text-area h1 span {
+    font-weight: lighter;
+    color: var(--Desaturated-Red);
+}
+.page .container-fluid .text-area p {
+    color: var(--Desaturated-Red);
+    margin-bottom: 50px !important;
+}
+.page .container-fluid .text-area form {
+    position: relative;
+}
+.page .container-fluid .text-area form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #888;
+    background-color: transparent;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+.page .container-fluid .text-area form input:focus {
+    outline: none !important;
+}
+.page .container-fluid .text-area form button {
+    top: 0;
+    right: 0;
+    border: none;
+    height: 100%;
+    padding: 0 30px;
+    border-radius: 50px;
+    position: absolute;
+    background-image: var(--Linear);
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+.page .container-fluid .image-area {
+    height: 100vh;
+    background-size: cover;
+    background-image: url(../images/hero-desktop.jpg);
+}
+.page .container-fluid .text-area,
+.page .container-fluid .image-area {
+    width: 50%;
+}
+@media (max-width: 991px) {
+    .page .container-fluid {
+        flex-direction: column;
+    }
+    .page .container-fluid .head {
+        display: block;
+        padding: 15px;
+    }
+    .page .container-fluid .text-area {
+        order: 1;
+        padding: 0 15px;
+        text-align: center;
+    }
+    .page .container-fluid .text-area a.logo {
+        display: none;
+    }
+    .page .container-fluid .text-area h1 br {
+        display: none;
+    }
+    .page .container-fluid .text-area,
+    .page .container-fluid .image-area {
+        width: 100%;
+    }
+}
+/* End Page */
